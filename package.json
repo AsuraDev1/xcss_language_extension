@@ -3,22 +3,20 @@
   "displayName": "XCSS Language Support",
   "description": "Soporte de sintaxis y resaltado para el lenguaje XCSS",
   "version": "0.0.1",
-  "publisher": "AsuraDev1",
+  "publisher": "tu-usuario",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AsuraDev1/xcss_language_extension"
+    "url": "https://github.com/tu-usuario/xcss-vscode"
   },
-  "homepage": "https://github.com/AsuraDev1/xcss_language_extension/blob/main/README.md",
+  "homepage": "https://github.com/tu-usuario/xcss-vscode/blob/main/README.md",
   "bugs": {
-    "url": "https://github.com/AsuraDev1/xcss_language_extension/issues"
+    "url": "https://github.com/tu-usuario/xcss-vscode/issues"
   },
   "engines": {
     "vscode": "^1.86.0"
   },
   "categories": [
-    "Programming Languages",
-    "Formatters",
-    "Snippets"
+    "Programming Languages"
   ],
   "keywords": [
     "xcss",
@@ -28,7 +26,6 @@
     "syntax"
   ],
   "license": "MIT",
-  "main": "./extension.js",
   "contributes": {
     "languages": [
       {
@@ -52,16 +49,10 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
-    "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
     "package": "vsce package",
     "publish": "vsce publish"
   },
   "devDependencies": {
-    "@types/vscode": "^1.86.0",
-    "@types/node": "^20.0.0",
-    "typescript": "^5.0.0",
     "@vscode/vsce": "^2.22.0"
   }
 }
