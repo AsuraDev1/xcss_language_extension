@@ -1,21 +1,67 @@
 {
-  "name": "xcss",
+  "name": "xcss-language-support",
   "displayName": "XCSS Language Support",
-  "description": "Soporte de sintaxis y edición para el lenguaje XCSS",
+  "description": "Soporte de sintaxis y resaltado para el lenguaje XCSS",
   "version": "0.0.1",
-  "engines": {"vscode": "^1.86.0"},
-  "categories": ["Programming Languages"],
+  "publisher": "AsuraDev1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AsuraDev1/xcss_language_extension"
+  },
+  "homepage": "https://github.com/AsuraDev1/xcss_language_extension/blob/main/README.md",
+  "bugs": {
+    "url": "https://github.com/AsuraDev1/xcss_language_extension/issues"
+  },
+  "engines": {
+    "vscode": "^1.86.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Formatters",
+    "Snippets"
+  ],
+  "keywords": [
+    "xcss",
+    "css",
+    "preprocessor",
+    "language",
+    "syntax"
+  ],
+  "license": "MIT",
+  "main": "./extension.js",
   "contributes": {
-    "languages": [{
-      "id": "xcss",
-      "aliases": ["XCSS", "xcss"],
-      "extensions": [".xcss"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "xcss",
-      "scopeName": "source.xcss",
-      "path": "./syntaxes/xcss.tmLanguage.json"
-    }]
+    "languages": [
+      {
+        "id": "xcss",
+        "aliases": [
+          "XCSS",
+          "xcss"
+        ],
+        "extensions": [
+          ".xcss"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "xcss",
+        "scopeName": "source.xcss",
+        "path": "./syntaxes/xcss.tmLanguage.json"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "publish": "vsce publish"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.86.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0",
+    "@vscode/vsce": "^2.22.0"
   }
 }
