@@ -1,0 +1,21 @@
+{
+  "name": "xcss",
+  "displayName": "XCSS Language Support",
+  "description": "Soporte de sintaxis y edición para el lenguaje XCSS",
+  "version": "0.0.1",
+  "engines": {"vscode": "^1.86.0"},
+  "categories": ["Programming Languages"],
+  "contributes": {
+    "languages": [{
+      "id": "xcss",
+      "aliases": ["XCSS", "xcss"],
+      "extensions": [".xcss"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "xcss",
+      "scopeName": "source.xcss",
+      "path": "./syntaxes/xcss.tmLanguage.json"
+    }]
+  }
+}
